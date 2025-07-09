@@ -1,0 +1,186 @@
+#root {
+  margin: 0 auto;
+  padding: 0; 
+  text-align: center;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  color: white;
+  background-color: transparent;
+  width: 100%; 
+  min-height: 100vh; 
+}
+
+
+/* Add to your existing CSS */
+body {
+  margin: 0;
+  background-color: #1a1a2e;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2em;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 20px;
+  
+}
+
+.sidebar {
+  width: 500px;
+  padding: 20px;
+  background-color: #16213e;
+  border-radius: 15px;
+  overflow-y: auto;
+}
+
+.scroll-container {
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+  padding-right: 8px;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #e3b23c;
+  border-radius: 10px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  justify-content: flex-start;
+}
+
+.dog-card {
+  background: #0f3460;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  height: 800px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin-bottom: 20px; /* Added space between card and button */
+}
+
+.dog-image {
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.discover-button {
+  background: #e94560;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 2.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0; /* Updated from 20px to remove extra space */
+  align-self: center; /* Ensures button stays centered */
+  margin-top: 15px;
+}
+
+.discover-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+}
+
+.discover-button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.attributes {
+  display: flex;
+  gap: 15px; /* This adds space between buttons */
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.attributes button {
+  border-radius: 20px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding-left: 30px;
+}
+
+.history-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.history-item img {
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.ban-item {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  background: #e94560;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ban-item:hover {
+  background: #e94560;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.empty-message {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  text-align: center;
+}
